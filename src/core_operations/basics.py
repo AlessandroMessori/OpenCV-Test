@@ -1,6 +1,5 @@
 import cv2
 import os
-import numpy as np
 
 script_dir = os.path.dirname(__file__)  # <-- absolute dir the script is in
 rel_path = "../images/ronaldo.jpg"
