@@ -1,11 +1,6 @@
 import cv2
 from ..utils.media import get_image_path
 
-path = get_image_path('juventus.jpeg')
-img = cv2.imread(path, 0)
-ret, thresh = cv2.threshold(img, 127, 255, 0)
-image, contours, _ = cv2.findContours(thresh, 1, 2)
-
 
 def printContourData(cnt):
     M = cv2.moments(cnt)
@@ -38,7 +33,16 @@ def printContourData(cnt):
     print(str(fitEllipse))
 
 
-for (index, cnt) in enumerate(contours[:10]):
-    print("countour number " + str(index) + ":")
-    printContourData(cnt)
-    print("--------------")
+def enumerateContours(contours):
+    for (index, cnt) in enumerate(contours[:10]):
+        print("countour number " + str(index) + ":")
+        printContourData(cnt)
+        print("--------------")
+
+
+path = get_image_path('juventus.jpeg')
+img = cv2.imread(path, 0)
+ret, thresh = cv2.threshold(img, 127, 255, 0)
+image, contours, _ = cv2.findContours(thresh, 1, 2)
+
+enumerateContours(contours)

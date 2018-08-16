@@ -1,7 +1,7 @@
 import cv2
 from ..utils.media import get_image_path
 
-path = get_image_path('ronaldo.jpg')
+path = get_image_path('rectangle.png')
 img = cv2.imread(path)
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
