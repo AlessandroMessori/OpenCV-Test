@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from ..utils.media import get_image_path
 
-path = get_image_path('match.jpeg')
+path = get_image_path('scene.png')
 img = cv2.imread(path, 0)
 img = cv2.medianBlur(img, 5)
 cimg = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
