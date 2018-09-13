@@ -6,7 +6,7 @@ pathname = get_image_path('game.mp4')
 cap = cv2.VideoCapture(pathname)  # take first frame of the video
 ret, frame = cap.read()
 # setup initial location of window
-r, h, c, w = 300, 90, 850, 125  # simply hardcoded the values
+r, h, c, w = 429, 78, 875, 84  # simply hardcoded the values
 track_window = (c, r, w, h)
 # set up the ROI for tracking
 roi = frame[r:r + h, c:c + w]
